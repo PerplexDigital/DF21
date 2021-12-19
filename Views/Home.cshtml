@@ -1,0 +1,17 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Home>
+
+<h1>@Model.Title</h1>
+
+<pre>@Model.Flex?.ToString()</pre>
+
+@if((object)Model.Flex is Block block)
+{
+    <h1>@block.Title</h1>
+    @block.Text
+
+    @if(block.Picker != null)
+    {
+        <a href="@block.Picker.Url()">@block.Picker.Name</a>
+    }
+}

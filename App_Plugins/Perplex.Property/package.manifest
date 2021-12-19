@@ -1,0 +1,6 @@
+{
+  "javascript": [
+    "~/App_Plugins/Perplex.Property/perplex.property.js",
+    "~/App_Plugins/Perplex.Property/perplex.property-cache.js"
+  ]
+}

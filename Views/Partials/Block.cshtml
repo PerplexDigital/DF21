@@ -1,0 +1,10 @@
+@inherits UmbracoViewPage<Block>
+@if(Model == null) return;
+
+<h1>@Model.Title</h1>
+@Model.Text
+
+@if(Model.Picker?.Url() is string pickerUrl)
+{
+    <a href="@pickerUrl">@Model.Picker.Name</a>
+}
